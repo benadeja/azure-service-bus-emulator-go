@@ -1,0 +1,35 @@
+{
+  "UserConfig": {
+    "Logging": {
+      "Type": "file",
+      "Level": "Information"
+    },
+    "Namespaces": [
+      {
+        "Name": "sbemulator",
+        "Logging": {
+          "Type": "file",
+          "Level": "Information"
+        },
+        "Queues": [
+          {
+            "Name": "queue.1",
+            "Properties": {
+              "LockDuration": "PT1M",
+              "MaxDeliveryCount": 10,
+              "DefaultMessageTimeToLive": "PT1H",
+              "DuplicateDetectionHistoryTimeWindow": "PT5M",
+              "RequiresDuplicateDetection": false,
+              "RequiresSession": false,
+              "DeadLetteringOnMessageExpiration": false
+            },
+            "Logging": {
+              "Type": "file",
+              "Level": "Information"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
